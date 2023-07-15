@@ -1,0 +1,59 @@
+[2023-07-15 10:30:00] -- Configuring done
+[2023-07-15 10:30:01] -- Generating done
+[2023-07-15 10:31:02] -- Build files have been written to: /path/to/build_directory
+[2023-07-15 10:31:03] Scanning dependencies of target myapp
+[2023-07-15 10:31:04] [ 10%] Building C object CMakeFiles/myapp.dir/main.c.o
+[2023-07-15 10:31:05] [ 20%] Building C object CMakeFiles/myapp.dir/utils.c.o
+[2023-07-15 10:32:06] [ 30%] Building C object CMakeFiles/myapp.dir/foo.c.o
+[2023-07-15 10:32:07] [ 40%] Linking C executable myapp
+[2023-07-15 10:32:08] [ 40%] Built target myapp
+[2023-07-15 10:33:03] Scanning dependencies of target myapp1
+[2023-07-15 10:33:04] [ 10%] Building C object CMakeFiles/myapp.dir/main.c.o
+[2023-07-15 10:33:05] [ 20%] Building C object CMakeFiles/myapp.dir/utils.c.o
+[2023-07-15 10:33:06] [ 30%] Building C object CMakeFiles/myapp.dir/foo.c.o
+[2023-07-15 10:33:07] [ 40%] Linking C executable myapp
+[2023-07-15 10:36:22] [ 40%] Built target myapp1
+
+[2023-07-15 10:45:00] [INFO] Scanning for projects...
+[2023-07-15 10:45:01] [INFO] ----------------------< com.example:project1 >----------------------
+[2023-07-15 10:45:02] [INFO] Building Project 1.0.0
+[2023-07-15 10:45:03] [INFO] --------------------------------[ jar ]---------------------------------
+[2023-07-15 10:46:00] [INFO]
+[2023-07-15 10:46:00] [INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ project1 ---
+[2023-07-15 10:46:00] [INFO] Deleting directory /path/to/project1/target
+[2023-07-15 10:46:00] [INFO]
+[2023-07-15 10:46:00] [INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ project1 ---
+[2023-07-15 10:46:00] [INFO] Using 'UTF-8' encoding to copy filtered resources.
+[2023-07-15 10:46:00] [INFO] Copying 10 resources
+[2023-07-15 10:46:00] [INFO]
+[2023-07-15 10:46:00] [INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ project1 ---
+[2023-07-15 10:46:00] [INFO] Changes detected - recompiling the module!
+[2023-07-15 10:46:00] [INFO] Compiling 15 source files to /path/to/project1/target/classes
+[2023-07-15 10:46:00] [INFO]
+[2023-07-15 10:46:00] [INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ project1 ---
+[2023-07-15 10:46:00] [INFO] Building jar: /path/to/project1/target/project1-1.0.0.jar
+[2023-07-15 10:46:00] [INFO] ------------------------------------------------------------------------
+[2023-07-15 10:46:00] [INFO] ----------------------< com.example:project2 >----------------------
+[2023-07-15 10:46:00] [INFO] Building Project 2.0.0
+[2023-07-15 10:46:00] [INFO] --------------------------------[ jar ]---------------------------------
+[2023-07-15 10:46:00] [INFO]
+[2023-07-15 10:46:00] [INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ project2 ---
+[2023-07-15 10:46:00] [INFO] Deleting directory /path/to/project2/target
+[2023-07-15 10:46:00] [INFO]
+[2023-07-15 10:46:00] [INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ project2 ---
+[2023-07-15 10:46:00] [INFO] Using 'UTF-8' encoding to copy filtered resources.
+[2023-07-15 10:46:00] [INFO] Copying 8 resources
+[2023-07-15 10:46:00] [INFO]
+[2023-07-15 10:46:00] [INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ project2 ---
+[2023-07-15 10:46:00] [INFO] Changes detected - recompiling the module!
+[2023-07-15 10:46:00] [INFO] Compiling 12 source files to /path/to/project2/target/classes
+[2023-07-15 10:46:00] [INFO]
+[2023-07-15 10:46:00] [INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ project2 ---
+[2023-07-15 10:46:00] [INFO] Building jar: /path/to/project2/target/project2-2.0.0.jar
+[2023-07-15 10:46:00] [INFO] ------------------------------------------------------------------------
+[2023-07-15 10:46:00] [INFO] ------------------------------------------------------------------------
+[2023-07-15 10:46:00] [INFO] BUILD SUCCESS
+[2023-07-15 10:46:00] [INFO] ------------------------------------------------------------------------
+[2023-07-15 10:46:00] [INFO] Total time: 10.174 s
+[2023-07-15 10:46:00] [INFO] Finished at: 2021-07-01T10:30:00Z
+[2023-07-15 10:46:00] [INFO] ------------------------------------------------------------------------
