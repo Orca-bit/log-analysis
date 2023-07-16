@@ -10,7 +10,7 @@ pub async fn analyze(mut line_iter: LineIter) -> Vec<String> {
                     "compile {} duration {}s, about {:.2}min",
                     analyzer.target_name(),
                     compile_duration,
-                    compile_duration as f64 / 60.
+                    compile_duration / 60.
                 ));
             }
             line_iter = compile_duration.1;
@@ -21,7 +21,7 @@ pub async fn analyze(mut line_iter: LineIter) -> Vec<String> {
                     "compile {} duration {}s, about {:.2}min",
                     analyzer.project_name(),
                     compile_duration,
-                    compile_duration as f64 / 60.
+                    compile_duration / 60.
                 ));
             }
             line_iter = compile_duration.1;

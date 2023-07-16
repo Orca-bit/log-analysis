@@ -8,14 +8,7 @@ pub(crate) struct AnalyzeJava {
 
 impl AnalyzeJava {
     pub fn new(start_log: &str) -> Option<Self> {
-        if Self::start_re().is_match(start_log) {
-            let project_name = Self::get_project_name(start_log).unwrap();
-            Some(Self {
-                project_name,
-            })
-        } else {
-            None
-        }
+        Self::get_project_name(start_log).map(|project_name| Self { project_name })
     }
 
     #[inline(always)]
@@ -30,11 +23,9 @@ impl AnalyzeJava {
 
     pub(crate) fn get_project_name(log: &str) -> Option<String> {
         let start_re = Self::start_re();
-        if start_re.is_match(log) {
-            Some(start_re.captures(log).unwrap()[1].trim().to_string())
-        } else {
-            None
-        }
+        start_re
+            .captures(log)
+            .map(|capture| capture[1].trim().to_owned())
     }
 
     pub(crate) fn project_name(&self) -> String {
@@ -47,11 +38,8 @@ impl LogEvent for AnalyzeJava {
     async fn get_duration(&mut self, mut line_iter: LineIter) -> (Option<Seconds>, LineIter) {
         let end_re = Self::end_re();
         while let Some(line) = line_iter.next_line().await.unwrap() {
-            if end_re.is_match(&line) {
-                return (
-                    Some(end_re.captures(&line).unwrap()[1].trim().parse::<Seconds>().unwrap()),
-                    line_iter,
-                );
+            if let Some(capture) = end_re.captures(&line) {
+                return (capture[1].trim().parse::<Seconds>().ok(), line_iter);
             }
         }
         (None, line_iter)
